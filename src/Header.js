@@ -1,4 +1,4 @@
-// Top Header of the Amazon page
+// Top Header/navbar of the Amazon page
 
 import React from 'react'
 import './Header.css'
