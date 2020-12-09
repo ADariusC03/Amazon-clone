@@ -17,14 +17,15 @@ function Checkout() {
              <div>
                 <h2 className="checkout_title">
                     Shopping Basket
-
-                    {/* BasketItem */}
-                    {/* BasketItem */}
-                    {/* BasketItem */}
-                    {/* BasketItem */}
-                    {/* BasketItem */}
-                    {/* BasketItem */}
                 </h2>
+
+                {/* BasketItem */}
+                {/* BasketItem */}
+                {/* BasketItem */}
+                {/* BasketItem */}
+                {/* BasketItem */}
+                {/* BasketItem */}
+                
              </div>
             </div>
 

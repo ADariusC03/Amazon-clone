@@ -1,15 +1,34 @@
 import React from 'react'
 import './Product.css';
+import { useStateValue } from './StateProvider';
 
 // Products page in Amazon. Parent of Home.js home_row
 // use props inside the Product() with curly braces to 
 // break apart the odjects we pass in
 
 
-function Product({ title, image, price, rating }) {
+function Product({ id, title, image, price, rating }) {
+    const [state, dispath] = useStateValue();
+
+    const addToBasket = () => {
+        // dispatch the item into the data layer
+        dispath({
+            type: "ADD_TO_BASKET",
+            item: {
+                id: id,
+                title: title,
+                image: image,
+                price: price,
+                rating: rating,
+            },
+        });
+
+    };
+
     return (
         <div className="product">
             <div className="product_info">
+                <p>{id}</p>
                 <p>{title}</p>
                 <p className="product_price">
                     <small>$</small>
@@ -18,14 +37,14 @@ function Product({ title, image, price, rating }) {
 
                 <div className="product_rating">
                     {Array(rating).fill().map((_, i) => (
-                        <p>🌟 </p>
+                        <p>⭐</p>
                     ))}
                 </div>
             </div>
             
             <img src={image} alt="" />
 
-            <button onC>Add to Cart</button>
+            <button onClick={addToBasket}>Add to Cart</button>
 
         </div>
     )
