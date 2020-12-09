@@ -6,16 +6,16 @@
 }
 
 .checkout_ad {
-  width: 80%;
-  margin-bottom: -40px;
+  width: 100%;
+  margin-bottom: -45px;
   position: inherit;
   top: -5px;
   left: 2px;
 }
 .button {
-  margin-left: 580px;
-  margin-bottom: 25px;
-  padding: 10px 25px;
+  margin-left: 565px;
+  margin-bottom: 20px;
+  padding: 10px 5px;
   font-size: 11px;
   cursor: pointer;
   outline: none;
@@ -27,7 +27,7 @@
 }
 
 .button:hover {
-  background-color: lightsalmon;
+  background-color: #f0c14b;
 }
 
 .button:active {

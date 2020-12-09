@@ -25,6 +25,9 @@ function Subtotal() {
             prefix={"$"}
             
             />
+
+            <button className="set">Proceed to Checkout</button>
+
         </div>
     );
 }
