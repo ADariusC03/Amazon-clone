@@ -1,16 +1,25 @@
-import { Link } from 'react-router-dom';
+import { Link, useHistory} from 'react-router-dom';
 import React, { useState } from 'react';
 import "./Login.css";
+import { auth } from './firebase';
 
 function Login() {
     //use to track the email and password when typing
     // e == event
+    // (history) use to problematically change the url
+    const history = useHistory();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const signIn = e => {
         e.preventDefault();     //no freshing page if clicked on sign-in button
 
+        auth
+            .signInWithEmailAndPassword(email, password)
+            .then(auth => {
+                history.push('/')
+            })
+            .catch(error => alert(error.message))
         // some firebase login
 
     }
@@ -18,7 +27,18 @@ function Login() {
     const register = e => {
         e.preventDefault();
 
-        // do some firebase register
+        auth
+          .createUserWithEmailAndPassword(email, password)
+          .then((auth) => {
+              // it successfully created a new user with email and password
+             // after they login, if the auth isn't empty, push new page or redirect
+             if(auth) {
+                 history.push('/')
+             }
+            })
+            .catch(error => alert(error.message))
+
+         // do some firebase register
     }
 
 
