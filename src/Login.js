@@ -2,6 +2,7 @@ import { Link, useHistory} from 'react-router-dom';
 import React, { useState } from 'react';
 import "./Login.css";
 import { auth } from './firebase';
+import { Helmet } from 'react-helmet';
 
 function Login() {
     //use to track the email and password when typing
@@ -44,6 +45,13 @@ function Login() {
 
     return (
         <div className="login">
+
+            <div>  
+             <Helmet>
+             <title>Amazon-Clone | Login</title>
+             </Helmet>
+            </div>
+
             <Link to="/">
               <img 
                  className="login_logo"

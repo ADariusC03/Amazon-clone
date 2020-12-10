@@ -1,14 +1,23 @@
 import React from 'react'
+import { Helmet } from 'react-helmet';
 import "./Checkout.css";
 import CheckoutProduct from './CheckoutProduct';
 import { useStateValue } from './StateProvider';
 import Subtotal from "./Subtotal";
+
 
 function Checkout() {
     const [{ basket, user }, dispatch] = useStateValue();
     
     return (
         <div className="checkout">
+
+            <div>  
+             <Helmet>
+             <title>Amazon-Clone | Checkout</title>
+             </Helmet>
+            </div>
+
             <div className="checkout_left">
              <img className="checkout_ad" 
              src="https://images-na.ssl-images-amazon.com/images/G/01/credit/img16/CCMP/newstorefront/YACC-desktop-nonprime-banner2.jpg" 
