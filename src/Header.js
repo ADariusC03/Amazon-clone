@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
 
 function Header() {
-    const [{basket}, dispatch] = useStateValue();
+    const [{ basket }, dispatch] = useStateValue();
     
     return (
         <div className='header'>
@@ -55,9 +55,9 @@ function Header() {
                 </div>
 
               <Link to="/checkout">
-              <div className="header_optionBasket">
+                <div className="header_optionBasket">
                     <AddShoppingCartIcon />
-    <span className="header_optionLineTwo header_basketCount">{basket?.length}</span>
+                 <span className="header_optionLineTwo header_basketCount">{basket?.length}</span>
                 </div>
               </Link>
             </div>

@@ -1,0 +1,44 @@
+.checkoutProduct {
+  display: flex;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.checkoutProduct_id {
+  font-family: fantasy;
+  font-size: 16px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+}
+
+.checkoutProduct_image {
+  object-fit: contain;
+  width: 200px;
+  height: 200px;
+  border-bottom: 3px solid #f0c14b;
+}
+
+.checkoutProduct_title {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.checkoutProduct_info > button {
+  background: #f0c14b;
+  transition-duration: 0.4s;
+  border: 3px solid;
+  border-color: #a88734 #9c7e31 #846a29;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.checkoutProduct_info > button:hover {
+  background-color: #dcdcdc;
+  color: white;
+}
+
+.checkoutProduct_rating {
+  display: flex;
+}
