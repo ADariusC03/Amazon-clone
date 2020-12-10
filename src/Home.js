@@ -17,7 +17,7 @@ function Home() {
         <div className="home_row">
             <Product 
             id="#2039484"
-            title="The CookerNinja OS101 Foodi 9-in-1 Pressure Cooker and Air Fryer with Nesting Broil Rack, 5-Quart Capacity, and a Stainless Steel Finish"
+            title="The CookerNinja: 9-in-1 Pressure Cooker and Air Fryer with Nesting Broil Rack, 5-Quart Capacity, and a Stainless Steel Finish"
             price={129.99}
             rating={5}
             image="https://images-na.ssl-images-amazon.com/images/I/410QLbTnUUL._AC_.jpg"
