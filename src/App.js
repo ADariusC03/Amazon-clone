@@ -7,6 +7,7 @@ import Checkout from "./Checkout";
 import Login from "./Login";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
+import Footer from "./Footer";
 
 
 function App() {
@@ -40,28 +41,33 @@ function App() {
 
   return(
     //BEM
-    <Router>
+    
    <div className="app">
-     <Switch>
+      <Router>
+        <Switch>
 
-     <Route path="/login">
-       <Login />
-      </Route>
+          <Route path="/login">
+             <Login />
+          </Route>
 
-     <Route path="/checkout">
-       <Header />
-       <Checkout />
-      </Route>
+          <Route path="/checkout">
+             <Header />
+             <Checkout />
+             <br />
+             <Footer />
+          </Route>
 
-      <Route path="/">
-       <Header />
-       <Home />
-      </Route>
+          <Route path="/">
+             <Header />
+             <Home />
+             <Footer/>
+          </Route>
 
-     </Switch>
+        </Switch>
+     </Router>
 
-    </div>
-    </Router>
+  </div>
+    
   );
 }
 

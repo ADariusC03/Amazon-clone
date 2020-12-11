@@ -28,7 +28,7 @@ function Checkout() {
              </form>
             
              <div>
-                <h3>Hello, {user?.email}</h3>
+                <h2>Hello, {user?.email}</h2>
                 <h2 className="checkout_title">
                     Shopping Basket
                 </h2>

@@ -3,6 +3,8 @@
   padding: 20px;
   background-color: white;
   height: max-content;
+  flex-direction: inherit;
+  min-height: 100vh;
 }
 
 .checkout_ad {
