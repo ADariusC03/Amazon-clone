@@ -1,0 +1,47 @@
+.payment {
+  background-color: snow;
+  min-height: 100vh;
+}
+
+.payment_container > h1 {
+  text-align: center;
+  padding: 30px;
+  margin: 100px;
+  font-weight: 500;
+}
+
+.payment_container > h1 a {
+  text-decoration: none;
+}
+
+.payment_title {
+  color: saddlebrown;
+  border-bottom: 2px solid lightslategray;
+  flex: 0.2;
+}
+
+.payment_address > p {
+  font-size: 21px;
+}
+
+.payment_address,
+.payment_items,
+.payment_details {
+  flex: 0.8;
+}
+
+.payment_section {
+  padding: 5px;
+  margin: 45px;
+  margin-left: 8px;
+}
+
+.payment_priceContainer {
+  text-align: center;
+}
+.payment_priceContainer > .payment_gift {
+  font-size: 15px;
+  display: flex;
+  margin-left: 409px;
+  padding: 10px;
+}

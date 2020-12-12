@@ -90,6 +90,12 @@ function Login() {
                      Create Your Amazon Account
                     </button>
             </div>
+            <hr />
+            <div className="cool">
+                <p className="col-sn">
+                    &copy;{new Date().getFullYear()} Conditions of Use | Privacy | Amazon-Clone
+                </p>
+            </div>
 
         </div>
     )

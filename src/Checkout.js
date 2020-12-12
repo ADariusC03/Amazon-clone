@@ -19,6 +19,7 @@ function Checkout() {
             </div>
 
             <div className="checkout_left">
+                
              <img className="checkout_ad" 
              src="https://images-na.ssl-images-amazon.com/images/G/01/credit/img16/CCMP/newstorefront/YACC-desktop-nonprime-banner2.jpg" 
              alt="Amazon credit banner" 
@@ -28,9 +29,9 @@ function Checkout() {
              </form>
             
              <div>
-                <h2>Hello, {user?.email}</h2>
+                <h2>{"Hello,"} {user?.email}</h2>
                 <h2 className="checkout_title">
-                    Shopping Basket
+                    Shopping Cart:
                 </h2>
 
                 {/* BasketItem */}

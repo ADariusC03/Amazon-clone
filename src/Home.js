@@ -15,14 +15,14 @@ function Home() {
              </Helmet>
          </div>
 
-            <div className="home__container">
+         <div className="home__container">
              <img
              className="home__image"
              src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
              alt="Amazon Banner"
             />
 
-        <div className="home_row">
+         <div className="home_row">
             <Product 
             id="#2039484"
             title="The CookerNinja: 9-in-1 Pressure Cooker and Air Fryer with Nesting Broil Rack, 5-Quart Capacity, and a Stainless Steel Finish"
@@ -37,9 +37,9 @@ function Home() {
             rating={5}
             image="https://m.media-amazon.com/images/I/71EvvFHgzzL._AC_UY436_QL65_.jpg"
             />
-        </div>
+         </div>
 
-        <div className="home_row">
+         <div className="home_row">
            <Product id="#4837237"
             title="The Art of War by Sun Tzu and Peter Harris (Hardcover)"
             price={24.99}
@@ -59,9 +59,9 @@ function Home() {
            rating={4}
            image="https://images-na.ssl-images-amazon.com/images/I/61d31FX2fzL._SL1500_.jpg"
             />
-        </div>
+         </div>
          
-        <div className="home_row">
+         <div className="home_row">
             <Product 
             id="#74835838"
             title="Othello by William Shakespeare"
@@ -76,9 +76,9 @@ function Home() {
             rating={5}
             image="https://images-na.ssl-images-amazon.com/images/I/71oNJlk3mdL._AC_SL1500_.jpg "
             />
-        </div>
+         </div>
 
-        <div className="home_row">
+         <div className="home_row">
             <Product 
             id="#4373802) "
             title="DEWALT Mechanics Tools Kit and Socket Set, 142-Piece "
@@ -100,9 +100,9 @@ function Home() {
             rating={4}
             image="https://images-na.ssl-images-amazon.com/images/I/61Kzcls5sbL._AC_SL1500_.jpg "
             />
-        </div>
+         </div>
 
-        <div className="home_row">
+         <div className="home_row">
          <Product 
          id="#9485732"
          title="Apple Watch Series 6 (GPS 40mm) - Blue Aluminum Case with Deep Navy Sport Band"
@@ -117,9 +117,9 @@ function Home() {
          rating={4}
          image="https://m.media-amazon.com/images/I/71JB6hM6Z6L._AC_UY436_QL65_.jpg"
          />
-        </div>
+         </div>
 
-        <div className="home_row">
+         <div className="home_row">
          <Product 
          id="#58392056"
          title="SAMSUNG 65-inch Class QLED Q60T Series - 4K UHD Dual LED Quantum HDR Smart TV with Alexa Built-in "
@@ -127,8 +127,8 @@ function Home() {
          rating={4}
          image=" https://images-na.ssl-images-amazon.com/images/I/81fkfrkmjSL._AC_SL1500_.jpg"
             />
-        </div>
-      </div>
+         </div>
+         </div>
         </div>
     )
 }

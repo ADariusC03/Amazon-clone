@@ -8,6 +8,14 @@ import Login from "./Login";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import Footer from "./Footer";
+import Payment from "./Payment";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+
+// Public API Key from Stripe
+// loads stripe up and stores into a promise
+const promise = loadStripe("pk_test_51HxRDZAJUA48a8hy50FbZbfEsyZfDVJDXZIJok63Cuc32asjT9cjAFSJKgE3F0T3l975DVx1UCa6wHRn30Z3uvoW00w787eYtC");
 
 
 function App() {
@@ -27,17 +35,17 @@ function App() {
        // the user just logged in / the user was logged in
        dispatch({
          type: 'SET_USER',
-         user: authUser
-       })
+         user: authUser,
+       });
      } else {
        // the user is logged out
        dispatch({
          type: 'SET_USER',
-         user: null
-       })
+         user: null,
+       });
      }
    })
-  }, [])
+  }, []);
 
   return(
     //BEM
@@ -46,6 +54,14 @@ function App() {
       <Router>
         <Switch>
 
+         <Route path="/payment">
+             <Header />
+             <Elements stripe={promise}>
+             <Payment />
+             </Elements>
+             <Footer/>
+          </Route>
+
           <Route path="/login">
              <Login />
           </Route>
@@ -53,7 +69,6 @@ function App() {
           <Route path="/checkout">
              <Header />
              <Checkout />
-             <br />
              <Footer />
           </Route>
 
