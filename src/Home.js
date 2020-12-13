@@ -2,10 +2,14 @@ import React from 'react';
 import './Home.css';
 import Product from './Product'
 import { Helmet } from 'react-helmet';
+import { useHistory } from 'react-router-dom';
 
 // The Body of the Amazon page
 
 function Home() {
+
+   const history = useHistory();
+
     return (
 
         <div className="home">
@@ -128,6 +132,7 @@ function Home() {
          image=" https://images-na.ssl-images-amazon.com/images/I/81fkfrkmjSL._AC_SL1500_.jpg"
             />
          </div>
+         <button className="next" onClick={e => history.push('/second')}>Next</button>
          </div>
         </div>
     )

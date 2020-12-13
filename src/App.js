@@ -12,6 +12,7 @@ import Payment from "./Payment";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import Orders from "./Orders";
+import Second from "./Second";
 
 
 // Public API Key from Stripe
@@ -77,6 +78,12 @@ function App() {
              <Header />
              <Checkout />
              <Footer />
+          </Route>
+
+          <Route path="/second">
+             <Header />
+             <Second />
+             <Footer/>
           </Route>
 
           <Route path="/">

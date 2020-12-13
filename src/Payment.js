@@ -194,9 +194,6 @@ function Payment() {
                                  <span>{processing ? <p>Processing</p> : "Place Your Order"}</span>
                                 </button>
                           </div>
-                          {/* Errors */}
-                          {/*if there's an error only then show the error in the div*/}
-                          {error && <div>error</div>}
                       </form>
                  </div>
                 </div>
