@@ -7,7 +7,6 @@ import CheckoutProduct from './CheckoutProduct';
 import './Payment.css';
 import { getBasketTotal } from './reducer';
 import { useStateValue } from './StateProvider';
-import RedeemIcon from '@material-ui/icons/Redeem';
 import axios from './axios';
 import { db } from './firebase';
 
@@ -178,9 +177,6 @@ function Payment() {
                                         <h4>
                                          <em>Order Total</em>: <strong>{value}</strong>
                                         </h4>
-                                        <small className="payment_gift">
-                                            <input type="checkbox" /><RedeemIcon />Add a gift receipt.
-                                        </small>
                                       </>
                                     )}
                                     decimalScale={2}
@@ -190,6 +186,7 @@ function Payment() {
                                     prefix={"$"}
             
                                 />
+                                       
                                 <button disabled={processing || disable ||succeeded}> 
                                  <span>{processing ? <p>Processing</p> : "Place Your Order"}</span>
                                 </button>

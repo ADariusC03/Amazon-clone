@@ -35,7 +35,7 @@ function Second() {
             />
             <Product 
             id="#1232455"
-            title="iRobot Roomba 675 Robot Vacuum-Wi-Fi Connectivity, Good for Pet Hair, Carpets, Hard Floors, Self-Charging"
+            title="iRobot Roomba 675: Good for Pet Hair, Carpets, Hard Floors, Self-Charging"
             price={599.98}
             rating={5}
             image="https://images-na.ssl-images-amazon.com/images/I/816uZdNKYhL._AC_SL1500_.jpg"

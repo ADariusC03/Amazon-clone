@@ -51,7 +51,7 @@ function Home() {
             image="https://m.media-amazon.com/images/I/91UL2DN6XvL._AC_UY436_QL65_.jpg"
             />
            <Product id="#11235675 "
-            title="Stainless Steel Mixing Bowls with Lids - Graters, Handle, Pour Spout, Airtight Lids (Set Of 3) "
+            title="Stainless Steel Mixing Bowls w/ Lids: Graters, Pour Spout, Airtight Lids "
             price={34.98}
             rating={4}
             image="https://images-na.ssl-images-amazon.com/images/I/71laoYKSSNL._AC_SL1500_.jpg "

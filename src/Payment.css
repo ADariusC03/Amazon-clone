@@ -15,7 +15,6 @@
 }
 
 .payment_title {
-  color: saddlebrown;
   border-bottom: 2px solid lightslategray;
   flex: 0.2;
 }
@@ -37,14 +36,9 @@
 }
 
 .payment_priceContainer {
-  text-align: center;
+  text-align: center;  
 }
-.payment_priceContainer > .payment_gift {
-  font-size: 15px;
-  display: flex;
-  margin-left: 409px;
-  padding: 1px;
-}
+
 
 .payment_details > h4 {
   padding-bottom: 50px;

@@ -16,6 +16,7 @@ function Header() {
             auth.signOut();
         }
     }
+
     
     return (
         <div className='header'>

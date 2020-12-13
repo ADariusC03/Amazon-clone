@@ -5,11 +5,11 @@
 }
 
 .checkoutProduct_id {
-  font-family: fantasy;
-  font-size: 16px;
+  font-family: fantasy, "Times New Roman", Times, serif;
+  font-size: 10px;
   font-style: normal;
   font-variant: normal;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .checkoutProduct_image {
