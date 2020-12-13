@@ -22,7 +22,7 @@ function Header() {
             <Link to="/">
             <img 
             className="header_logo" 
-            src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'
+            src='http://pngimg.com/uploads/amazon/amazon_PNG11.png' alt=""
             />
             </Link>
 
@@ -39,10 +39,11 @@ function Header() {
                     <span className="header_optionLineOne">
                         Hello, {!user ? 'Guest' : user.email}
                     </span>
-                    <span className="header_optionLineTwo">{!user ? 'Sign Out' : 'Sign In'}</span>
+                    <span className="header_optionLineTwo">{!user ? 'Sign In' : 'Sign Out'}</span>
                   </div>
                 </Link>
 
+                <Link to="/orders">
                 <div className="header_option">
                 <span className="header_optionLineOne">
                         Returns
@@ -51,6 +52,7 @@ function Header() {
                         & Orders
                     </span>
                 </div>
+                </Link>
 
                 <div className="header_option">
                 <span className="header_optionLineOne">

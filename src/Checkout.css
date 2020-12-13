@@ -5,6 +5,7 @@
   height: max-content;
   flex-direction: inherit;
   min-height: 100vh;
+  min-width: 90vh;
 }
 
 .checkout_ad {

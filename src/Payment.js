@@ -9,11 +9,12 @@ import { getBasketTotal } from './reducer';
 import { useStateValue } from './StateProvider';
 import RedeemIcon from '@material-ui/icons/Redeem';
 import axios from './axios';
+import { db } from './firebase';
 
 function Payment() {
     // const is used to create a variable 
 
-    const [{ basket, user}] = useStateValue();
+    const [{ basket, user}, dispatch] = useStateValue();
 
     const history = useHistory();
 
@@ -56,10 +57,24 @@ function Payment() {
 
         const payload = await stripe.confirmCardPayment(clientSecret, {
             payment_method: {
-                card: elements.getElement(CardElement)
-            }
+                card: elements.getElement(CardElement),
+            },
          }).then(({ paymentIntent }) => {
             // paymentInent = payment confirmation
+
+
+            // push into the database
+            db
+             .collection("users")
+             .doc(user?.uid)
+             .collection("orders")
+             .doc(paymentIntent.id)
+             .set({
+              basket: basket,
+              amount: paymentIntent.amount,
+              created: paymentIntent.created,
+            });
+
 
             // transation was good
             setSucceeded(true);
@@ -70,8 +85,12 @@ function Payment() {
             // nothing else should be processing
             setProcessing(false);
 
+            dispatch({
+                type: 'EMPTY_BASKET'
+            });
+
             // doesnt want them to go back to the payment page to do a loop
-            history.replaceState('/orders')
+            history.replace('/orders')
         });
 
 
@@ -177,7 +196,7 @@ function Payment() {
                           </div>
                           {/* Errors */}
                           {/*if there's an error only then show the error in the div*/}
-                          {error && <div>(error)</div>}
+                          {error && <div>error</div>}
                       </form>
                  </div>
                 </div>

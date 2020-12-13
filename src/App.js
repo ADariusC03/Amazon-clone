@@ -11,6 +11,7 @@ import Footer from "./Footer";
 import Payment from "./Payment";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
+import Orders from "./Orders";
 
 
 // Public API Key from Stripe
@@ -19,7 +20,7 @@ const promise = loadStripe("pk_test_51HxRDZAJUA48a8hy50FbZbfEsyZfDVJDXZIJok63Cuc
 
 
 function App() {
-  const [{}, dispatch] = useStateValue();
+  const [{user}, dispatch] = useStateValue();
 
   // listener(keeps track of who is signed in)
   // useEffect == if statment in react. 
@@ -53,6 +54,12 @@ function App() {
    <div className="app">
       <Router>
         <Switch>
+
+        <Route path="/orders">
+             <Header />
+             <Orders />
+             <Footer/>
+          </Route>
 
          <Route path="/payment">
              <Header />

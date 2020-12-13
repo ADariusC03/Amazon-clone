@@ -17,7 +17,7 @@ app.use(cors({ orgin: true }));
 app.use(express.json());
 
 // API routes
-app.get('/', (request, response) => response.status(200).send('hello hell'));
+app.get('/', (request, response) => response.status(200).send('hello ac'));
 
 // post site to payments log/create
 app.post("/payments/create", async (request, response) => {
